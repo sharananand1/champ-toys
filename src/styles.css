@@ -1,0 +1,16 @@
+:root {
+  --primary-color: #a99e7b;
+  --secondary-color: #333;
+  --accent-color: #ff6b6b;
+  --background-color: #f4f4f4;
+  --font-family: 'Comic Sans MS', cursive; /* Using Comic Sans MS for demonstration */
+}
+
+body {
+  font-family: var(--font-family);
+  line-height: 1.6;
+  color: var(--secondary-color);
+  background-color: var(--background-color);
+  margin: 0;
+  padding: 0;
+}

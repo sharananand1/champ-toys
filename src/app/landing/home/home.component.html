@@ -1,1 +1,171 @@
-<p>home works!</p>
+<!-- user/components/landing-page/landing-page.component.html -->
+<div class="landing-page">
+  <div class="container">
+  <section class="hero">
+    <div class="hero-background">
+      <h1>Welcome to Champ Toys</h1>
+      <p>Discover joy in every toy!</p>
+      <a href="#categories" class="cta-button">Explore Now</a>
+    </div>
+  </section>
+
+  <section id="categories" class="categories">
+    <h2>Shop by Category</h2>
+    <div class="category-grid">
+      <!-- These would be *ngFor in Angular -->
+      <div class="category-card">
+        <img src="assets/images/img_1.png" alt="Action Figures">
+        <h3>Action Figures</h3>
+      </div>
+      <div class="category-card">
+        <img src="assets/images/img_5.png" alt="Board Games">
+        <h3>Board Games</h3>
+      </div>
+      <div class="category-card">
+        <img src="assets/images/img_3.png" alt="Dolls">
+        <h3>Dolls</h3>
+      </div>
+      <div class="category-card">
+        <img src="assets/images/img_4.png" alt="Educational Toys">
+        <h3>Educational Toys</h3>
+      </div>
+    </div>
+  </section>
+
+  <section class="age-groups">
+    <h2>Shop by Age</h2>
+    <div class="age-group-slider">
+      <!-- This would be a carousel component in Angular -->
+      <div class="age-group-card">0-2 years</div>
+      <div class="age-group-card">3-5 years</div>
+      <div class="age-group-card">6-8 years</div>
+      <div class="age-group-card">9-12 years</div>
+      <div class="age-group-card">13+ years</div>
+    </div>
+  </section>
+
+  <section class="featured-toys">
+    <h2>Featured Toys</h2>
+    <div class="toy-carousel">
+      <!-- This would be a carousel component in Angular -->
+      <div class="toy-card">
+        <img src="assets/images/img_6.png" alt="Toy 1">
+        <h3>Amazing Toy 1</h3>
+        <p class="original-price">₹1,200</p>
+        <p class="discounted-price">₹560 <span class="discount">(60% off)</span></p>
+        <div class="rating">★★★★☆</div>
+      </div><div class="toy-card">
+        <img src="assets/images/img_7.png" alt="Toy 2">
+        <h3>Amazing Toy 2</h3>
+        <p class="original-price">₹200</p>
+        <p class="discounted-price">₹160 <span class="discount">(30% off)</span></p>
+        <div class="rating">★★★★☆</div>
+      </div><div class="toy-card">
+        <img src="assets/images/img_8.png" alt="Toy 3">
+        <h3>Amazing Toy 3</h3>
+        <p class="original-price">₹2,200</p>
+        <p class="discounted-price">₹1960 <span class="discount">(15% off)</span></p>
+        <div class="rating">★★★★☆</div>
+      </div><div class="toy-card">
+        <img src="assets/images/img_9.png" alt="Toy 4">
+        <h3>Amazing Toy 4</h3>
+        <p class="original-price">₹1,600</p>
+        <p class="discounted-price">₹1360 <span class="discount">(30% off)</span></p>
+        <div class="rating">★★★★☆</div>
+      </div>
+      <!-- More toy cards... -->
+    </div>
+  </section>
+
+  <section class="informative-section">
+    <div class="informative-content">
+
+      <div class="image-content">
+        <img src="assets/images/img_12.png" alt="Informative Image">
+      </div>
+      <div class="text-content">
+        <h2>Why Choose Us?</h2>
+        <p>At Champ Toys, we offer a delightful shopping experience for families with a wide range of high-quality, safe toys. Enjoy fast shipping to get your orders delivered in no time!</p>
+        <p>Our friendly customer service team is here to assist with any questions or concerns, ensuring your experience is smooth and enjoyable. Choose us for quality, speed, and satisfaction!</p>
+    </div>
+    </div>
+  </section>
+
+  <section class="top-discounts">
+    <h2>Top Discounts</h2>
+    <div class="discount-grid">
+      <!-- These would be *ngFor in Angular -->
+      <div class="discount-card">
+        <img src="assets/images/img_10.png" alt="Discounted Toy 1">
+        <h3>Super Fun Toy</h3>
+        <p class="original-price">₹1,500</p>
+        <p class="discounted-price">₹1,200 <span class="discount">(20% off)</span></p>
+        <p class="discount-percentage">20% OFF</p>
+        <div class="timer">Time remaining: <span id="timer">10:00:00</span></div>
+      </div>
+      <div class="discount-card">
+        <img src="assets/images/img_10.png" alt="Discounted Toy 1">
+        <h3>Super Fun Toy</h3>
+        <p class="original-price">₹1,500</p>
+        <p class="discounted-price">₹1,200 <span class="discount">(20% off)</span></p>
+        <p class="discount-percentage">20% OFF</p>
+        <div class="timer">Time remaining: <span id="timer">10:00:00</span></div>
+      </div>
+      <div class="discount-card">
+        <img src="assets/images/img_10.png" alt="Discounted Toy 1">
+        <h3>Super Fun Toy</h3>
+        <p class="original-price">₹1,500</p>
+        <p class="discounted-price">₹1,200 <span class="discount">(20% off)</span></p>
+        <p class="discount-percentage">20% OFF</p>
+        <div class="timer">Time remaining: <span id="timer">10:00:00</span></div>
+      </div>
+      <div class="discount-card">
+        <img src="assets/images/img_10.png" alt="Discounted Toy 1">
+        <h3>Super Fun Toy</h3>
+        <p class="original-price">₹1,500</p>
+        <p class="discounted-price">₹1,200 <span class="discount">(20% off)</span></p>
+        <p class="discount-percentage">20% OFF</p>
+        <div class="timer">Time remaining: <span id="timer">10:00:00</span></div>
+      </div>
+      <div class="discount-card">
+        <img src="assets/images/img_10.png" alt="Discounted Toy 1">
+        <h3>Super Fun Toy</h3>
+        <p class="original-price">₹1,500</p>
+        <p class="discounted-price">₹1,200 <span class="discount">(20% off)</span></p>
+        <p class="discount-percentage">20% OFF</p>
+        <div class="timer">Time remaining: <span id="timer">10:00:00</span></div>
+      </div>
+      <div class="discount-card">
+        <img src="assets/images/img_10.png" alt="Discounted Toy 1">
+        <h3>Super Fun Toy</h3>
+        <p class="original-price">₹1,500</p>
+        <p class="discounted-price">₹1,200 <span class="discount">(20% off)</span></p>
+        <p class="discount-percentage">20% OFF</p>
+        <div class="timer">Time remaining: <span id="timer">10:00:00</span></div>
+      </div>
+      <!-- More discount cards... -->
+    </div>
+  </section>
+
+  <section class="customer-reviews">
+    <h2>Happy Customers</h2>
+    <div class="review-carousel">
+      <!-- This would be a carousel component in Angular -->
+      <div class="review-card">
+        <p>"My kids love these toys Great quality and fast shipping."</p>
+        <div class="rating">★★★★★</div>
+        <p class="customer-name">- Jane D.</p>
+      </div>
+      <!-- More review cards... -->
+    </div>
+  </section>
+
+  <section class="banner-section">
+    <div class="banner">
+      <h2>Limited Time Offer!</h2>
+      <p>Get 20% off on all toys!</p>
+      <a href="#" class="cta-button">Shop Now</a>
+    </div>
+  </section>
+</div>
+</div>
