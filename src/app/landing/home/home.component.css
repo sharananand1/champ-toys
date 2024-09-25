@@ -10,18 +10,18 @@
 
 h1, h2, h3 {
   color: var(--primary-color);
-  margin-bottom: 1rem; /* Use rem for consistency */
+  margin-bottom: 1rem;
   font-weight: 600;
 }
 
 section {
-  padding: 1rem 0; /* Same top and bottom padding for all sections */
-  margin-bottom: 1rem; /* Consistent spacing between sections */
+  padding: 1rem 0;
+  margin-bottom: 1rem;
 }
 
 .hero {
   text-align: center;
-  margin-bottom: 1rem; /* Ensure spacing below the hero section */
+  margin-bottom: 1rem;
 }
 
 .hero-background {
@@ -128,8 +128,6 @@ section {
 }
 
 .age-group-card, .toy-card, .review-card {
-  /*flex: 0 0 auto;*/
-  /*width: 340px;*/
   background-color: white;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -225,7 +223,7 @@ section {
 }
 
 .banner {
-  background-color: #f9f9f9; /* Light background color */
+  background-color: #f9f9f9;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -236,7 +234,7 @@ section {
 }
 
 .informative-section, .banner {
-  padding: 1rem; /* Ensure consistent padding inside informative and banner sections */
+  padding: 1rem;
 }
 
 .toy-carousel .carousel-arrow {
@@ -278,7 +276,7 @@ section {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   padding: 1rem;
   margin-right: 1rem;
-  height: 350px; /* Fixed card height */
+  height: 350px;
   display: flex;
   flex-direction: column;
 }
@@ -314,23 +312,21 @@ section {
   right: 10px;
 }
 
-/* Media queries for responsiveness */
-
-@media (max-width: 1440px) { /* Large desktop */
+@media (max-width: 1440px) {
   .toy-card {
-    flex: 0 0 calc(25% - 15px); /* 4.5 views */
+    flex: 0 0 calc(25% - 15px);
   }
 }
 
-@media (max-width: 1024px) { /* Small desktop */
+@media (max-width: 1024px) {
   .toy-card {
-    flex: 0 0 calc(33.3333% - 13.3333px); /* 3.5 views */
+    flex: 0 0 calc(33.3333% - 13px);
   }
 }
 
-@media (max-width: 768px) { /* Tablet */
+@media (max-width: 768px) {
   .toy-card {
-    flex: 0 0 calc(50% - 10px); /* 3 views */
+    flex: 0 0 calc(50% - 10px);
   }
 }
 

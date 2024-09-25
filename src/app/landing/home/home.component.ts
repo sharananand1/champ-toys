@@ -6,7 +6,7 @@ import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
   styleUrl: './home.component.css'
 })
 export class HomeComponent implements OnInit {
-  featuredToys = [
+  featuredToys: any = [
     {
       name: 'Action Figure',
       imageUrl: 'assets/images/img_6.png',
@@ -47,7 +47,7 @@ export class HomeComponent implements OnInit {
   @ViewChild('toyCarousel', { static: false }) toyCarousel!: ElementRef; // Get a reference to the carousel element
 
   ngOnInit(): void {
-    this.startTimer();
+    // this.startTimer();
   }
 
   scrollToLeft() {
@@ -68,7 +68,7 @@ export class HomeComponent implements OnInit {
     }
   }
 
-  startTimer() {
+/*  startTimer() {
     const endTime = new Date('2024-12-31T23:59:59').getTime();
     const timerInterval = setInterval(() => {
       const currentTime = new Date().getTime();
@@ -87,5 +87,5 @@ export class HomeComponent implements OnInit {
 
       this.timeRemaining = `${days}:${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
     }, 1000);
-  }
+  }*/
 }

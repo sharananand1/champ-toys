@@ -21,12 +21,12 @@ export class MainLayoutComponent implements OnInit {
     this.router.events.pipe(
       filter(event => event instanceof NavigationEnd),
       map(() => this.activatedRoute.root),
-      map(route => {
+      map((route:any) => {
         while (route.firstChild) route = route.firstChild;
         return route;
       }),
-      mergeMap(route => route.data)
-    ).subscribe(data => {
+      mergeMap((route:any) => route.data)
+    ).subscribe((data:any) => {
       this.showHeader = data['showHeader'] !== undefined ? data['showHeader'] : true;
       this.showFooter = data['showFooter'] !== undefined ? data['showFooter'] : true;
       this.headerType = data['headerType'] || 'default';
