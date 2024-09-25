@@ -1,34 +1,37 @@
-<header>
-  <ng-container [ngSwitch]="headerType">
-    <div *ngSwitchCase="'default'">
-      <!-- shared/components/header/header.component.html -->
-      <header class="header">
-        <div class="container">
-          <div class="logo">
-            <a routerLink="/"><img src="assets/images/logo.png" alt="Logo"></a>
-          </div>
-          <nav class="nav">
-            <ul>
-              <li><a routerLink="/">Home</a></li>
-              <li><a routerLink="/categories">Categories</a></li>
-              <li><a routerLink="/products">Products</a></li>
-              <li><a routerLink="/shipping">Shipping</a></li>
-              <li><a routerLink="/cart">Cart</a></li>
-            </ul>
-          </nav>
-          <div class="search">
-            <input type="text" placeholder="Search for products">
-            <button type="button">Search</button>
-          </div>
-          <div class="user-actions">
-            <a routerLink="/login">Login</a>
-            <a routerLink="/register">Register</a>
-            <a routerLink="/account">Account</a>
-          </div>
-        </div>
-      </header>
+<header class="header" [ngClass]="{ 'shrink': isShrunk }">
+  <div class="container">
+    <div class="logo">
+      <a routerLink="/">
+        <img [src]="isShrunk ? 'assets/images/logo.png' : 'assets/images/logo.png'" alt="Logo">
+      </a>
     </div>
-    <div *ngSwitchCase="'alternative'">Alternative Header</div>
-    <!-- Add more cases as needed -->
-  </ng-container>
+
+    <nav class="nav">
+      <div class="burger-menu" *ngIf="isMobileView" (click)="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul [ngClass]="{'desktop-menu': !isMobileView, 'mobile-menu': isMobileView}" [class.active]="menuOpen">
+        <li><a routerLink="/">Home</a></li>
+        <li><a routerLink="/categories">Categories</a></li>
+        <li><a routerLink="/products">Products</a></li>
+        <li><a routerLink="/shipping">Shipping</a></li>
+        <li><a routerLink="/cart">Cart</a></li>
+      </ul>
+    </nav>
+
+    <div class="search-user-actions" *ngIf="!isMobileView">
+      <div class="search">
+        <input type="text" placeholder="Search for products">
+        <button type="button">Search</button>
+      </div>
+
+      <div class="user-actions">
+        <a routerLink="/login">Login</a>
+        <a routerLink="/register">Register</a>
+        <a routerLink="/account">Account</a>
+      </div>
+    </div>
+  </div>
 </header>

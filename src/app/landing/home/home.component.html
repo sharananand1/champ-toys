@@ -43,15 +43,21 @@
 
     <section class="featured-toys">
       <h2>Featured Toys</h2>
-      <div class="toy-carousel">
-        <div class="toy-card">
-          <img src="assets/images/img_6.png" alt="Amazing Toy 1">
-          <h3>Amazing Toy 1</h3>
-          <p class="original-price">₹1,200</p>
-          <p class="discounted-price">₹560 <span class="discount">(60% off)</span></p>
+      <div class="toy-carousel" #toyCarousel>
+        <div class="carousel-arrow left" (click)="scrollToLeft()"><i class="fa fa-angle-left"></i></div>
+        <div class="toy-card" *ngFor="let toy of featuredToys">
+          <div class="image-container">
+            <img [src]="toy.imageUrl" [alt]="toy.name">
+          </div>
+          <h3>{{ toy.name }}</h3>
+          <p class="mrp-price" *ngIf="toy.mrpPrice && toy.discountPrice">MRP ₹{{ toy.mrpPrice }}</p>
+          <p class="discounted-price" *ngIf="toy.discountPrice && toy.discountPercentage">
+            ₹{{ toy.discountPrice }} <span class="discount">({{ toy.discountPercentage }}% off)</span>
+          </p>
+          <p class="discounted-price" *ngIf="toy.mrpPrice && !toy.discountPrice">₹{{ toy.mrpPrice }}</p>
           <div class="rating">★★★★☆</div>
         </div>
-        <!-- More toy cards... -->
+        <div class="carousel-arrow right" (click)="scrollToRight()"><i class="fa fa-angle-right"></i></div>
       </div>
     </section>
 
@@ -62,7 +68,18 @@
         </div>
         <div class="text-content">
           <h2>Why Choose Us?</h2>
-          <p>At Champ Toys, we offer a delightful shopping experience for families with a wide range of high-quality, safe toys.</p>
+          <p>
+            At Champ Toys, we're passionate about bringing joy to children and families. We curate a delightful collection of high-quality, safe, and educational toys that spark imagination and creativity.
+          </p>
+          <p>
+            Here's why parents and kids love Champ Toys:
+          </p>
+          <ul>
+            <li>Wide Selection: From classic toys to the latest trends, we have something for every child's interest.</li>
+            <li>Quality Assurance: We partner with trusted brands and manufacturers to ensure durability and safety.</li>
+            <li>Exceptional Service: Our friendly team is here to assist you with any questions or concerns.</li>
+            <li>Fast & Reliable Shipping: We offer speedy delivery options to get your toys to you in no time.</li>
+          </ul>
         </div>
       </div>
     </section>
@@ -73,7 +90,37 @@
         <div class="discount-card">
           <img src="assets/images/img_10.png" alt="Super Fun Toy at Discount">
           <h3>Super Fun Toy</h3>
-          <p class="original-price">₹1,500</p>
+          <p class="mrp-price">₹1,500</p>
+          <p class="discounted-price">₹1,200 <span class="discount">(20% off)</span></p>
+        </div>
+        <div class="discount-card">
+          <img src="assets/images/img_10.png" alt="Super Fun Toy at Discount">
+          <h3>Super Fun Toy</h3>
+          <p class="mrp-price">₹1,500</p>
+          <p class="discounted-price">₹1,200 <span class="discount">(20% off)</span></p>
+        </div>
+        <div class="discount-card">
+          <img src="assets/images/img_10.png" alt="Super Fun Toy at Discount">
+          <h3>Super Fun Toy</h3>
+          <p class="mrp-price">₹1,500</p>
+          <p class="discounted-price">₹1,200 <span class="discount">(20% off)</span></p>
+        </div>
+        <div class="discount-card">
+          <img src="assets/images/img_10.png" alt="Super Fun Toy at Discount">
+          <h3>Super Fun Toy</h3>
+          <p class="mrp-price">₹1,500</p>
+          <p class="discounted-price">₹1,200 <span class="discount">(20% off)</span></p>
+        </div>
+        <div class="discount-card">
+          <img src="assets/images/img_10.png" alt="Super Fun Toy at Discount">
+          <h3>Super Fun Toy</h3>
+          <p class="mrp-price">₹1,500</p>
+          <p class="discounted-price">₹1,200 <span class="discount">(20% off)</span></p>
+        </div>
+        <div class="discount-card">
+          <img src="assets/images/img_10.png" alt="Super Fun Toy at Discount">
+          <h3>Super Fun Toy</h3>
+          <p class="mrp-price">₹1,500</p>
           <p class="discounted-price">₹1,200 <span class="discount">(20% off)</span></p>
         </div>
         <!-- More discount cards... -->

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 
 @Component({
   selector: 'app-home',
@@ -6,10 +6,66 @@ import { Component, OnInit } from '@angular/core';
   styleUrl: './home.component.css'
 })
 export class HomeComponent implements OnInit {
+  featuredToys = [
+    {
+      name: 'Action Figure',
+      imageUrl: 'assets/images/img_6.png',
+      mrpPrice: 1000,
+      discountPrice: 800,
+      discountPercentage: 20
+    },
+    {
+      name: 'Building Blocks',
+      imageUrl: 'assets/images/img_7.png',
+      mrpPrice: 120,
+      discountPrice: 0,  // No discount for this item
+      discountPercentage: null
+    },
+    {
+      name: 'Teddy Bear',
+      imageUrl: 'assets/images/img_8.png',
+      mrpPrice: 1200,
+      discountPrice: 900,
+      discountPercentage: 25
+    },
+    {
+      name: 'Remote Control Car',
+      imageUrl: 'assets/images/img_9.png',
+      mrpPrice: 2500,
+      discountPrice: 2250,
+      discountPercentage: 10
+    },
+    {
+      name: 'Puzzle Game',
+      imageUrl: 'assets/images/img_10.png',
+      mrpPrice: 600,
+      discountPrice: null,  // No discount for this item
+      discountPercentage: 0
+    }
+  ];
   timeRemaining: string = '10:00:00';
+  @ViewChild('toyCarousel', { static: false }) toyCarousel!: ElementRef; // Get a reference to the carousel element
 
   ngOnInit(): void {
     this.startTimer();
+  }
+
+  scrollToLeft() {
+    if (this.toyCarousel && this.toyCarousel.nativeElement) {
+      this.toyCarousel.nativeElement.scrollTo({
+        left: this.toyCarousel.nativeElement.scrollLeft - 300,
+        behavior: 'smooth'
+      });
+    }
+  }
+
+  scrollToRight() {
+    if (this.toyCarousel && this.toyCarousel.nativeElement) {
+      this.toyCarousel.nativeElement.scrollTo({
+        left: this.toyCarousel.nativeElement.scrollLeft + 300,
+        behavior: 'smooth'
+      });
+    }
   }
 
   startTimer() {

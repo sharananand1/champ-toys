@@ -1,9 +1,9 @@
 :root {
-  --primary-color: #a99e7b;
+  --primary-color: #dbac6b; /* Example primary color */
   --secondary-color: #333;
   --accent-color: #ff6b6b;
   --background-color: #f4f4f4;
-  --font-family: 'Comic Sans MS', cursive; /* Using Comic Sans MS for demonstration */
+  --font-family: 'Poppins', sans-serif; /* Example font */
 }
 
 body {
@@ -13,4 +13,10 @@ body {
   background-color: var(--background-color);
   margin: 0;
   padding: 0;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
 }
