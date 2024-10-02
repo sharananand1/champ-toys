@@ -1,13 +1,13 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { HomeComponent } from './home/home.component';
-import { RouterModule, Routes } from '@angular/router';
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
+import {HomeComponent} from './home/home.component';
+import {RouterModule, Routes} from '@angular/router';
 
 const routes: Routes = [
   {
     path: '',
     component: HomeComponent,
-    data: { showHeader: true, showFooter: true, headerType: 'default' }
+    data: {showHeader: true, showFooter: true, headerType: 'default'}
   }
 ];
 
@@ -22,4 +22,5 @@ const routes: Routes = [
   ],
   exports: [RouterModule]
 })
-export class LandingModule { }
+export class LandingModule {
+}

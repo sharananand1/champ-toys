@@ -40,7 +40,7 @@ section {
 }
 
 .hero-background h1,
-.hero-background p ,
+.hero-background p,
 .hero-background a {
   position: relative;
   z-index: 2;
@@ -62,7 +62,7 @@ section {
   text-decoration: none;
   border-radius: 5px;
   display: inline-block;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.1s ease;
 }
 
 .cta-button:hover {
@@ -111,6 +111,7 @@ section {
   margin-top: 1rem;
   padding-bottom: 1rem;
   scroll-snap-type: x mandatory;
+  transition: transform 0.1s ease-in-out;
 }
 
 .age-group-slider::-webkit-scrollbar, .toy-carousel::-webkit-scrollbar, .review-carousel::-webkit-scrollbar {
@@ -128,12 +129,22 @@ section {
 }
 
 .age-group-card, .toy-card, .review-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-height: 350px;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: var(--primary-color);
   background-color: white;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   scroll-snap-align: start;
   padding: 1rem;
   margin-right: 1rem;
+  flex: 0 0 calc(20% - 16px);
+  width: 100%;
+  flex-direction: column;
 }
 
 .age-group-card img, .toy-card img, .review-card img {
@@ -146,14 +157,10 @@ section {
   font-size: 1.25rem;
 }
 
-.age-group-card {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100px;
-  font-size: 1.2em;
-  font-weight: bold;
-  color: var(--primary-color);
+.toy-card .image-container {
+  max-height: 165px;
+  min-height: 165px;
+  overflow: hidden;
 }
 
 .rating {
@@ -194,7 +201,7 @@ section {
 .informative-section {
   margin-bottom: 1rem;
   border-radius: 10px;
-  background: rgb(228,228,228);
+  background: rgb(228, 228, 228);
   background: linear-gradient(90deg, rgb(252, 252, 252) 0%, rgb(99, 98, 98) 35%, rgb(61, 40, 20) 100%);
 }
 
@@ -202,6 +209,10 @@ section {
   display: flex;
   gap: 20px;
   align-items: center;
+}
+
+.informative-section {
+  padding: 1rem;
 }
 
 .text-content {
@@ -224,17 +235,13 @@ section {
 
 .banner {
   background-color: #f9f9f9;
-  padding: 20px;
+  padding: 1rem;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .banner-section {
   margin-bottom: 1rem;
-}
-
-.informative-section, .banner {
-  padding: 1rem;
 }
 
 .toy-carousel .carousel-arrow {
@@ -285,56 +292,6 @@ section {
   text-decoration: none;
 }
 
-.toy-carousel {
-  display: flex;
-  gap: 20px;
-  transition: transform 0.3s ease-in-out;
-}
-
-.toy-card {
-  flex: 0 0 calc(20% - 16px);
-  min-width: 250px;
-  background-color: white;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  padding: 1rem;
-  margin-right: 1rem;
-  height: 350px;
-  display: flex;
-  flex-direction: column;
-}
-
-.toy-card .image-container {
-  max-height: 165px;
-  min-height: 165px;
-  overflow: hidden;
-}
-
-.toy-card img {
-  width: 100%;
-  height: 100%;
-}
-
-.carousel-arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
-  padding: 10px 15px;
-  border-radius: 10px;
-  cursor: pointer;
-  z-index: 3;
-}
-
-.carousel-arrow.left {
-  left: 10px;
-}
-
-.carousel-arrow.right {
-  right: 10px;
-}
-
 @media (max-width: 1440px) {
   .toy-card {
     flex: 0 0 calc(25% - 15px);
@@ -372,15 +329,15 @@ section {
     flex: none;
   }
 
-   h1 {
-      font-size: 1.8rem;
-    }
+  h1 {
+    font-size: 1.8rem;
+  }
 
-    h2 {
-      font-size: 1.6rem;
-    }
+  h2 {
+    font-size: 1.6rem;
+  }
 
-    .age-group-card, .toy-card, .review-card {
-      min-width: 250px;
-    }
+  .age-group-card, .toy-card, .review-card {
+    min-width: 250px;
+  }
 }

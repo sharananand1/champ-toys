@@ -44,14 +44,10 @@
     <section class="featured-toys">
       <h2>Featured Toys</h2>
       <div class="toy-carousel" #toyCarousel>
-        <!-- Left Arrow -->
         <div class="carousel-arrow left" (click)="scrollToLeft()">
           <i class="fa fa-angle-left"></i>
         </div>
-
-        <!-- Toy Cards -->
         <div class="toy-card" *ngFor="let toy of featuredToys">
-          <!-- Link to toy details with dynamic ID -->
           <a [routerLink]="['/collection/details', toy.id]" class="toy-link">
             <div class="image-container">
               <img [src]="toy.imageUrl" [alt]="toy.name">
@@ -65,8 +61,6 @@
             <div class="rating">★★★★☆</div>
           </a>
         </div>
-
-        <!-- Right Arrow -->
         <div class="carousel-arrow right" (click)="scrollToRight()">
           <i class="fa fa-angle-right"></i>
         </div>
