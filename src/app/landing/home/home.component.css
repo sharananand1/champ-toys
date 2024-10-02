@@ -262,6 +262,29 @@ section {
   overflow: hidden;
 }
 
+.featured-toys .toy-link {
+  text-decoration: none;
+  display: block;
+}
+
+.featured-toys .toy-link h3,
+.featured-toys .toy-link p,
+.featured-toys .toy-link img,
+.featured-toys .toy-link .rating {
+  text-decoration: none;
+}
+
+.featured-toys .toy-link:hover {
+  text-decoration: none;
+}
+
+.featured-toys .toy-link:hover h3,
+.featured-toys .toy-link:hover p,
+.featured-toys .toy-link:hover img,
+.featured-toys .toy-link:hover .rating {
+  text-decoration: none;
+}
+
 .toy-carousel {
   display: flex;
   gap: 20px;

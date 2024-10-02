@@ -8,6 +8,7 @@ import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 export class HomeComponent implements OnInit {
   featuredToys: any = [
     {
+      id: 1,  // Unique ID for each toy
       name: 'Action Figure',
       imageUrl: 'assets/images/img_6.png',
       mrpPrice: 1000,
@@ -15,6 +16,7 @@ export class HomeComponent implements OnInit {
       discountPercentage: 20
     },
     {
+      id: 2,  // Unique ID for each toy
       name: 'Building Blocks',
       imageUrl: 'assets/images/img_7.png',
       mrpPrice: 120,
@@ -22,6 +24,7 @@ export class HomeComponent implements OnInit {
       discountPercentage: null
     },
     {
+      id: 3,  // Unique ID for each toy
       name: 'Teddy Bear',
       imageUrl: 'assets/images/img_8.png',
       mrpPrice: 1200,
@@ -29,6 +32,7 @@ export class HomeComponent implements OnInit {
       discountPercentage: 25
     },
     {
+      id: 4,  // Unique ID for each toy
       name: 'Remote Control Car',
       imageUrl: 'assets/images/img_9.png',
       mrpPrice: 2500,
@@ -36,6 +40,7 @@ export class HomeComponent implements OnInit {
       discountPercentage: 10
     },
     {
+      id: 5,  // Unique ID for each toy
       name: 'Puzzle Game',
       imageUrl: 'assets/images/img_10.png',
       mrpPrice: 600,
@@ -43,6 +48,7 @@ export class HomeComponent implements OnInit {
       discountPercentage: 0
     }
   ];
+
   timeRemaining: string = '10:00:00';
   @ViewChild('toyCarousel', { static: false }) toyCarousel!: ElementRef; // Get a reference to the carousel element
 

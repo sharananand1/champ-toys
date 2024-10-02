@@ -44,22 +44,35 @@
     <section class="featured-toys">
       <h2>Featured Toys</h2>
       <div class="toy-carousel" #toyCarousel>
-        <div class="carousel-arrow left" (click)="scrollToLeft()"><i class="fa fa-angle-left"></i></div>
-        <div class="toy-card" *ngFor="let toy of featuredToys">
-          <div class="image-container">
-            <img [src]="toy.imageUrl" [alt]="toy.name">
-          </div>
-          <h3>{{toy.name}}</h3>
-          <p class="mrp-price" *ngIf="toy.mrpPrice && toy.discountPrice">MRP ₹{{toy.mrpPrice}}</p>
-          <p class="discounted-price" *ngIf="toy.discountPrice && toy.discountPercentage">
-            ₹{{toy.discountPrice}} <span class="discount">({{toy.discountPercentage}}% off)</span>
-          </p>
-          <p class="discounted-price" *ngIf="toy.mrpPrice && !toy.discountPrice">₹{{toy.mrpPrice}}</p>
-          <div class="rating">★★★★☆</div>
+        <!-- Left Arrow -->
+        <div class="carousel-arrow left" (click)="scrollToLeft()">
+          <i class="fa fa-angle-left"></i>
         </div>
-        <div class="carousel-arrow right" (click)="scrollToRight()"><i class="fa fa-angle-right"></i></div>
+
+        <!-- Toy Cards -->
+        <div class="toy-card" *ngFor="let toy of featuredToys">
+          <!-- Link to toy details with dynamic ID -->
+          <a [routerLink]="['/collection/details', toy.id]" class="toy-link">
+            <div class="image-container">
+              <img [src]="toy.imageUrl" [alt]="toy.name">
+            </div>
+            <h3>{{toy.name}}</h3>
+            <p class="mrp-price" *ngIf="toy.mrpPrice && toy.discountPrice">MRP ₹{{toy.mrpPrice}}</p>
+            <p class="discounted-price" *ngIf="toy.discountPrice && toy.discountPercentage">
+              ₹{{toy.discountPrice}} <span class="discount">({{toy.discountPercentage}}% off)</span>
+            </p>
+            <p class="discounted-price" *ngIf="toy.mrpPrice && !toy.discountPrice">₹{{toy.mrpPrice}}</p>
+            <div class="rating">★★★★☆</div>
+          </a>
+        </div>
+
+        <!-- Right Arrow -->
+        <div class="carousel-arrow right" (click)="scrollToRight()">
+          <i class="fa fa-angle-right"></i>
+        </div>
       </div>
     </section>
+
 
     <section class="informative-section">
       <div class="informative-content">

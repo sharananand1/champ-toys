@@ -1,0 +1,136 @@
+<div class="details">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="#">Home</a><span>/ </span>
+      <a href="#">Category</a><span>/</span>
+      <a>Product Name</a>
+    </div>
+    <section class="product-details">
+      <div class="product-image">
+        <img src="./assets/images/img_6.png" alt="Product Image">
+      </div>
+      <div class="product-info">
+        <h1>Fire Truck Tv Art</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vel volutpat libero. Nulla facilisi.</p>
+        <div class="ratings">
+          <span class="rating-stars">★★★★☆</span> (44 reviews)
+        </div>
+        <p class="available">In Stock</p>
+        <p class="price">
+          <span class="discounted-price">₹110</span>
+          <span class="mrp"> <s>MRP ₹224</s></span>
+          <span class="percentage"> (29% OFF)</span>
+        </p>
+        <div class="actions">
+          <a class="add-to-cart">Add to Cart</a>
+          <a class="buy-now">Buy Now</a>
+          <a class="wishlist"><i class="fa fa-heart"></i> Wishlist</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="product-tabs">
+      <div class="tab" [ngClass]="{'active': selectedTab === 'description'}" (click)="switchTab('description')">Description</div>
+      <div class="tab" [ngClass]="{'active': selectedTab === 'reviews'}" (click)="switchTab('reviews')">Reviews</div>
+      <div class="tab-content" *ngIf="selectedTab === 'description'">
+        <div>
+          <h4 class="product-description-title">
+            Product Details
+            <span class="product-details-icon"></span>
+          </h4>
+          <p class="product-description-content">
+            Type: Teddy Bear<br>
+            Age: 2 Months Plus<br>
+            Colour: Brown<br>
+            Operation Mode: Manual Operation<br>
+            Filling: Polyfill<br>
+            Multipack Set: Single
+          </p>
+        </div>
+        <div class="size-fit-desc">
+          <h4 class="size-fit-desc-title product-description-title">Size & Fit</h4>
+          <p class="size-fit-desc-content product-description-content">
+            Height: 40 cm
+          </p>
+        </div>
+        <div class="size-fit-desc">
+          <h4 class="size-fit-desc-title product-description-title">Material & Care</h4>
+          <p class="size-fit-desc-content product-description-content">
+            Polyester<br>
+            Hand Wash
+          </p>
+        </div>
+        <div class="specifications">
+          <h2 class="specifications-title">Specifications</h2>
+          <div class="specification-item">
+            <div class="specification-left">Operation Mode</div>
+            <div class="specification-right">Manual Operation</div>
+          </div>
+          <div class="specification-item">
+            <div class="specification-left">Type</div>
+            <div class="specification-right">Teddy Bears</div>
+          </div>
+          <div class="specification-item">
+            <div class="specification-left">Multipack Set</div>
+            <div class="specification-right">Single</div>
+          </div>
+          <div class="specification-item">
+            <div class="specification-left">Filling</div>
+            <div class="specification-right">Polyfill</div>
+          </div>
+          <div class="specification-item">
+            <div class="specification-left">Material</div>
+            <div class="specification-right">Polyester</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-content" *ngIf="selectedTab === 'reviews'">
+        <p>There are no reviews yet. Be the first to review this product!</p>
+        <button class="view-all">View All</button>
+      </div>
+    </section>
+
+    <section class="reviews">
+      <h2>Customer Reviews</h2>
+      <div class="review">
+        <div class="avatar"><i class="fa fa-user"></i></div>
+        <h3>John Doe <span class="review-date">- 01 Jan 2024</span></h3>
+        <div class="rating-stars">★★★★★</div>
+        <p>This product is amazing! I have been using it for a week now and I'm very satisfied.</p>
+      </div>
+      <div class="review">
+        <div class="avatar"><i class="fa fa-user"></i></div>
+        <h3>Jane Smith <span class="review-date">- 02 Feb 2024</span></h3>
+        <div class="rating-stars">★★★★☆</div>
+        <p>Excellent quality. Highly recommended!</p>
+      </div>
+    </section>
+
+    <section class="related-products">
+      <h2>Related Products</h2>
+      <div class="related-grid">
+        <div class="related-product-card">
+          <img src="./assets/images/img_9.png" alt="Related Product 1">
+          <h3>Related Product 1</h3>
+          <div class="price">$99.99</div>
+        </div>
+        <div class="related-product-card">
+          <img src="./assets/images/img_7.png" alt="Related Product 2">
+          <h3>Related Product 2</h3>
+          <div class="price">$129.99</div>
+        </div>
+        <div class="related-product-card">
+          <img src="./assets/images/img_8.png" alt="Related Product 3">
+          <h3>Related Product 3</h3>
+          <div class="price">$89.99</div>
+        </div>
+        <div class="related-product-card">
+          <img src="./assets/images/img_9.png" alt="Related Product 4">
+          <h3>Related Product 4</h3>
+          <div class="price">$119.99</div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
