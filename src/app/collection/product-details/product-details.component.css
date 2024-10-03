@@ -189,10 +189,6 @@ section {
 
 .specification-left,
 .specification-right {
-  font-size: 16px;
-}
-
-.specification-left {
   color: #6c757d;
   font-size: 14px;
 }
@@ -415,7 +411,6 @@ section {
   }
 }
 
-/* Tablet (iPads) */
 @media (min-width: 768px) and (max-width: 1024px) {
   .details {
     padding: 0 20px;
