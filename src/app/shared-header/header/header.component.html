@@ -22,9 +22,16 @@
     </nav>
 
     <div class="search-user-actions" *ngIf="!isMobileView">
+      <!--      <div class="search">-->
+      <!--        <input type="text" placeholder="Search for products">-->
+      <!--&lt;!&ndash;        <button type="button">Search</button>&ndash;&gt;-->
+      <!--      </div>-->
+
       <div class="search">
-        <input type="text" placeholder="Search for products">
-        <button type="button">Search</button>
+        <span class="icon-search">
+          <i class="fas fa-search"></i>
+        </span>
+        <input type="text" placeholder="Search for products, brands and more">
       </div>
 
       <div class="user-actions">
@@ -35,3 +42,41 @@
     </div>
   </div>
 </header>
+<!--
+<header class="header" [ngClass]="{ 'shrink': isShrunk }">
+  <div class="container">
+    <div class="logo">
+      <a routerLink="/">
+        <img [src]="isShrunk ? 'assets/images/logo.png' : 'assets/images/logo.png'" alt="Logo">
+      </a>
+    </div>
+
+    <nav class="nav">
+      <div class="burger-menu" *ngIf="isMobileView" (click)="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul [ngClass]="{'desktop-menu': !isMobileView, 'mobile-menu': isMobileView}" [class.active]="menuOpen">
+        <li><a routerLink="/">Home</a></li>
+        <li><a routerLink="/categories">Categories</a></li>
+        <li><a routerLink="/products">Products</a></li>
+        <li><a routerLink="/shipping">Shipping</a></li>
+        <li><a routerLink="/cart">Cart</a></li>
+      </ul>
+    </nav>
+
+    <div class="search-user-actions">
+      <div class="search">
+        <input type="text" placeholder="Search for products, brands, etc.">
+        <button type="button">Search</button>
+      </div>
+
+      <div class="user-actions">
+        <a routerLink="/account"><i class="fas fa-user"></i></a>
+        <a routerLink="/wishlist"><i class="fas fa-heart"></i></a>
+        <a routerLink="/cart"><i class="fas fa-shopping-bag"></i></a>
+      </div>
+    </div>
+  </div>
+</header>-->
